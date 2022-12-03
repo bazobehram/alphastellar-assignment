@@ -1,0 +1,17 @@
+
+<app-header></app-header>
+<div class="flex-container">
+  <div class="main">
+    <div class="vertical-menu">
+      <a *ngFor="let item of menuList">{{item}}</a>
+    </div>
+
+    <div class="container">
+      <span>{{'Body' | uppercase}}</span>
+      <app-one-form (formSubmit)="onSubmit($event)"></app-one-form>
+    </div>
+  </div>
+  <div class="sidebar">{{'Sidebar' | uppercase}}</div>
+</div>
+<app-footer></app-footer>
+<pre class="json">{{list | json}}</pre>

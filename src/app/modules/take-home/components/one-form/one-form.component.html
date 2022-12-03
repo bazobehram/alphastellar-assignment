@@ -1,0 +1,49 @@
+<form [formGroup]="oneForm" (ngSubmit)="onSubmit()">
+    <ul class="flex-outer">
+      <li>
+        <input type="text" [placeholder]="fieldsName.textFormField1 | uppercase" [formControlName]="fieldsName.textFormField1">
+        <span class="validation"
+        *ngIf="textFormField1?.invalid && (textFormField1?.dirty || textFormField1?.touched)"
+      >
+        <small *ngIf="textFormField1?.errors?.['required']">
+          {{fieldsName.textFormField1}} is required.
+        </small>
+      </span>
+      </li>
+      <li>
+        <input type="text" [placeholder]="fieldsName.textFormField2 | uppercase" [formControlName]="fieldsName.textFormField2">
+        <span class="validation"
+        *ngIf="textFormField2?.invalid && (textFormField2?.dirty || textFormField2?.touched)"
+      >
+        <small *ngIf="textFormField2?.errors?.['required']">
+            {{fieldsName.textFormField2}} is required.
+        </small>
+      </span>
+      </li>
+      <li>
+        <input type="text" [placeholder]="fieldsName.textFormField3 | uppercase" [formControlName]="fieldsName.textFormField3">
+        <span class="validation"
+        *ngIf="textFormField3?.invalid && (textFormField3?.dirty || textFormField3?.touched)"
+      >
+        <small *ngIf="textFormField3?.errors?.['required']">
+            {{fieldsName.textFormField3}} is required.
+        </small>
+      </span>
+      </li>
+      <li>
+        <input type="text" [placeholder]="fieldsName.textFormField4 | uppercase" [formControlName]="fieldsName.textFormField4">
+        <span class="validation"
+        *ngIf="textFormField4?.invalid && (textFormField4?.dirty || textFormField4?.touched)"
+      >
+        <small *ngIf="textFormField4?.errors?.['required']">
+            {{fieldsName.textFormField4}} is required.
+        </small>
+      </span>
+      </li>
+     
+      <li>
+        <button [disabled]="!oneForm.valid" type="submit">{{'Submit' | uppercase}}</button>
+        <button [disabled]="!this.oneForm.dirty" type="button" (click)="onClear()">{{'Clear' | uppercase}}</button>
+      </li>
+    </ul>
+  </form>

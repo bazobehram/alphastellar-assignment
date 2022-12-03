@@ -1,0 +1,122 @@
+.flex-container {
+  display: flex;
+  background-color: orange;
+  height: auto;
+  margin: auto;
+}
+
+.main {
+  text-align: center;
+  background-color: #ef9a9a;
+  flex: 3;
+  display: flex;
+  background-color: #f4cbcc;
+  height: auto;
+  margin: auto;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.sidebar {
+  background-color: #9fc5e8;
+  flex: 1;
+}
+
+.vertical-menu {
+  margin: 0 auto;
+  a {
+    display: block;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #c27ba0;
+    color: white;
+    margin: 5px;
+  }
+
+  :hover {
+    background-color: #ffe599;
+    color: black
+  }
+}
+form {
+  text-align: center;
+  input {
+    width: 100%;
+    margin: 10px;
+    height: 30px;
+  }
+  
+}
+
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .container * {
+    box-sizing: border-box;
+  }
+
+  .flex-outer,
+  .flex-inner {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .flex-outer li,
+  .flex-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .flex-inner {
+    padding: 0 8px;
+    justify-content: space-between;
+  }
+
+  .flex-outer > li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .flex-outer li label,
+  .flex-outer li p {
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .flex-outer li p {
+    margin: 0;
+  }
+
+  .flex-outer li input:not([type="checkbox"]),
+  .flex-outer li textarea {
+    padding: 15px;
+    border: none;
+  }
+
+  .flex-inner li {
+    width: 100px;
+  }
+
+  .json {
+    margin: 10px;
+    text-align: center;
+  }
+
+
+@media only screen and (max-device-width: 768px){
+  .sidebar {
+    display: none;
+  }
+}
+
